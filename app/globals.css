@@ -1,21 +1,40 @@
-@tailwind base;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+SC:wght@300;400;500;600;700&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=UnifrakturCook:wght@700&display=swap');@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.logo {
+  font-family: "Cinzel Decorative", serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.glow-title {
+
+
+  color: ghostwhite; /* Base text color (dark red) */
+  text-shadow: 
+    0 0 5px #fff, 
+    0 0 10px #fff, 
+    0 0 20px #fff, 
+    0 0 30px #fff, 
+    0 0 40px #fff;
+  animation: pulseDarkRed 2s infinite;
+}
+
+@keyframes pulseDarkRed {
+  0%, 100% {
+    text-shadow: 
+      0 0 5px #fff, 
+      0 0 10px #fff, 
+      0 0 20px #fff, 
+      0 0 30px #fff, 
+      0 0 40px #fff;
+  }
+  50% {
+    text-shadow: 
+      0 0 10px #fff, 
+      0 0 20px #fff, 
+      0 0 30px #fff, 
+      0 0 50px #fff, 
+      0 0 60px #fff;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
